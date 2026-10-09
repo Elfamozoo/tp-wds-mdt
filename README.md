@@ -226,10 +226,10 @@ SkipCapture=YES
 UserDataLocation=AUTO
 TimeZoneName=Central European Time
 KeyboardLocale=040c:0000040c
-AdminPassword=Azerty1
+AdminPassword=<MOT_DE_PASSE>
 JoinDomain=Afci.local
 DomainAdmin=Afci.local\administrateur
-DomainAdminPassword=Azerty1
+DomainAdminPassword=<MOT_DE_PASSE>
 HideShell=YES
 ApplyGPOPack=NO
 SkipAppsOnUpgrade=NO
@@ -253,10 +253,10 @@ SkipFinalSummary=NO
 [Settings]
 Priority=Default
 [Default]
-DeployRoot=\\SRV-AD\DeploymentShare$
+DeployRoot=\\<SERVEUR>\DeploymentShare$
 UserDomain=Afci.local
 UserID=administrateur
-UserPassword=Azerty1
+UserPassword=<MOT_DE_PASSE>
 SkipBDDWelcome=YES
 ```
 
