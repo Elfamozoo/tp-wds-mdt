@@ -11,30 +11,30 @@ Déployer un système d’exploitation personnalisé (Windows 10, 11, Server…)
 - Standardisation sur tout le parc informatique
 ## Sommaire
 
-- [🧠 Objectif](#objectif)
-- [🧱 Composants nécessaires](#composants-nécessaires)
-- [📚 Définitions des termes clés](#définitions-des-termes-clés)
-- [1️ Installer les prérequis](#1-installer-les-prérequis)
+- [🧠 Objectif](#-objectif)
+- [🧱 Composants nécessaires](#-composants-nécessaires)
+- [📚 Définitions des termes clés](#-définitions-des-termes-clés)
+- [1️ Installer les prérequis](#1️-installer-les-prérequis)
   - [a. Outils à installer sur le serveur](#a-outils-à-installer-sur-le-serveur)
-- [2️ Créer l’environnement MDT](#2-créer-lenvironnement-mdt)
+- [2️ Créer l’environnement MDT](#2️-créer-lenvironnement-mdt)
   - [a. Créer le partage de déploiement](#a-créer-le-partage-de-déploiement)
-- [3️ Importer l’image .WIM de Windows](#3-importer-limage-wim-de-windows)
+- [3️ Importer l’image .WIM de Windows](#3️-importer-limage-wim-de-windows)
   - [a. Ajouter un système d’exploitation](#a-ajouter-un-système-dexploitation)
-- [4️ Ajouter une application (ex : VLC)](#4-ajouter-une-application-ex-vlc)
-  - [a. Clic droit sur **Applications** → **New Application**](#a-clic-droit-sur-applications-new-application)
-- [5️ Créer une Task Sequence](#5-créer-une-task-sequence)
+- [4️ Ajouter une application (ex : VLC)](#4️-ajouter-une-application-ex--vlc)
+  - [a. Clic droit sur **Applications** → **New Application**](#a-clic-droit-sur-applications--new-application)
+- [5️ Créer une Task Sequence](#5️-créer-une-task-sequence)
   - [a. Nouvelle séquence de tâches](#a-nouvelle-séquence-de-tâches)
-- [6️ Lier l’application à la Task Sequence](#6-lier-lapplication-à-la-task-sequence)
-- [7️ Personnaliser les fichiers de réponse](#7-personnaliser-les-fichiers-de-réponse)
+- [6️ Lier l’application à la Task Sequence](#6️-lier-lapplication-à-la-task-sequence)
+- [7️ Personnaliser les fichiers de réponse](#7️-personnaliser-les-fichiers-de-réponse)
   - [a. CustomSettings.ini](#a-customsettingsini)
   - [b. Bootstrap.ini](#b-bootstrapini)
-- [8️ Générer les images personnalisées](#8-générer-les-images-personnalisées)
+- [8️ Générer les images personnalisées](#8️-générer-les-images-personnalisées)
   - [a. Mise à jour du partage MDT](#a-mise-à-jour-du-partage-mdt)
   - [b. Récupérer les images](#b-récupérer-les-images)
-- [9️ Ajouter les images à WDS](#9-ajouter-les-images-à-wds)
+- [9️ Ajouter les images à WDS](#9️-ajouter-les-images-à-wds)
   - [a. Dans la console **WDS**](#a-dans-la-console-wds)
 - [10 Déployer sur une machine cliente](#10-déployer-sur-une-machine-cliente)
-- [✅ Résultat final](#résultat-final)
+- [✅ Résultat final](#-résultat-final)
 
 ## 🧱 Composants nécessaires
 
@@ -226,10 +226,10 @@ SkipCapture=YES
 UserDataLocation=AUTO
 TimeZoneName=Central European Time
 KeyboardLocale=040c:0000040c
-AdminPassword=<MOT_DE_PASSE>
-JoinDomain=<domaine>
-DomainAdmin=<domaine>\administrateur
-DomainAdminPassword=<MOT_DE_PASSE>
+AdminPassword=Azerty1
+JoinDomain=Afci.local
+DomainAdmin=Afci.local\administrateur
+DomainAdminPassword=Azerty1
 HideShell=YES
 ApplyGPOPack=NO
 SkipAppsOnUpgrade=NO
@@ -253,10 +253,10 @@ SkipFinalSummary=NO
 [Settings]
 Priority=Default
 [Default]
-DeployRoot=\\<SERVEUR>\DeploymentShare$
-UserDomain=<domaine>
+DeployRoot=\\SRV-AD\DeploymentShare$
+UserDomain=Afci.local
 UserID=administrateur
-UserPassword=<MOT_DE_PASSE>
+UserPassword=Azerty1
 SkipBDDWelcome=YES
 ```
 
@@ -348,7 +348,7 @@ SkipBDDWelcome=YES
 
 ![image-51.png](assets/image-51.png)
 
-- L’ordinateur est directement intégré au domaine <domaine>
+- L’ordinateur est directement intégré au domaine Afci.local
 
 ![image-52.png](assets/image-52.png)
 
