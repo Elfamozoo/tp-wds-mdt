@@ -227,8 +227,8 @@ UserDataLocation=AUTO
 TimeZoneName=Central European Time
 KeyboardLocale=040c:0000040c
 AdminPassword=<MOT_DE_PASSE>
-JoinDomain=Afci.local
-DomainAdmin=Afci.local\administrateur
+JoinDomain=<domaine>
+DomainAdmin=<domaine>\administrateur
 DomainAdminPassword=<MOT_DE_PASSE>
 HideShell=YES
 ApplyGPOPack=NO
@@ -254,7 +254,7 @@ SkipFinalSummary=NO
 Priority=Default
 [Default]
 DeployRoot=\\<SERVEUR>\DeploymentShare$
-UserDomain=Afci.local
+UserDomain=<domaine>
 UserID=administrateur
 UserPassword=<MOT_DE_PASSE>
 SkipBDDWelcome=YES
@@ -348,7 +348,7 @@ SkipBDDWelcome=YES
 
 ![image-51.png](assets/image-51.png)
 
-- L’ordinateur est directement intégré au domaine Afci.local
+- L’ordinateur est directement intégré au domaine <domaine>
 
 ![image-52.png](assets/image-52.png)
 
