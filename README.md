@@ -348,7 +348,7 @@ SkipBDDWelcome=YES
 
 ![image-51.png](assets/image-51.png)
 
-- L’ordinateur est directement intégré au domaine <domaine>
+- L’ordinateur est directement intégré au domaine `<domaine>`
 
 ![image-52.png](assets/image-52.png)
 
